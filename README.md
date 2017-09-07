@@ -7,7 +7,7 @@
 **Tested with Alfred 3**
 
 This workflow allows you to do in-line Google searches right from the Alfred bar.
-It gives you the flexibility to either open the result URL or copy it to clipboard.
+You can either open the result URL or copy it to clipboard.
 
 
 ## IMPORTANT
@@ -31,12 +31,9 @@ and double click to open it with Alfred.
 
 ```sh
 # search, ENTER to open result in browser
-gs search query
-# search, ENTER to copy URL to clipboard
-gs search query$
+# search, ⌘C on item to copy URL to clipboard
+gs query
 ```
-
-Ending the search query with a '$' changes the workflow behavior to copy URL instead of opening the URL.
 
 
 ## Screenshots
@@ -44,8 +41,6 @@ Ending the search query with a '$' changes the workflow behavior to copy URL ins
 ![Default UI](https://i.imgur.com/8fGcx4j.png)
 
 ![Search 1](https://i.imgur.com/WeBLxZp.png)
-
-![Search 2 with Clipboard](https://i.imgur.com/Ob5QyrU.png)
 
 ![Unicode](https://i.imgur.com/h6Pe6IK.png)
 
