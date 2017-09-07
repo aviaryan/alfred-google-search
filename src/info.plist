@@ -12,69 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>972223F8-62FF-481B-A278-48AF806C3F68</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>316EF341-C933-4CB3-BD1C-4AFDE5AC1C25</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>316EF341-C933-4CB3-BD1C-4AFDE5AC1C25</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>ED2EA30D-58AD-47A7-9FBC-ABA20ECACCEF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>972223F8-62FF-481B-A278-48AF806C3F68</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
 				<string>B6E9EBE4-42CC-4D19-A42E-FF5FBBA7E54D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>A840295D-8515-4A70-9CCC-0F4AFB04858C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>CA1FA265-9751-4778-808B-F126C5305582</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>ED2EA30D-58AD-47A7-9FBC-ABA20ECACCEF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A840295D-8515-4A70-9CCC-0F4AFB04858C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,7 +25,7 @@
 	<key>createdby</key>
 	<string>Avi Aryan</string>
 	<key>description</key>
-	<string>Inline Google Search Results (open or clipboard)</string>
+	<string>Inline Google Search Results</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -124,7 +62,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Google Web Search (end query with $ for clipboard)</string>
+				<string>Google Web Search (⌘C on item for copy)</string>
 				<key>title</key>
 				<string>Search Google</string>
 				<key>type</key>
@@ -158,109 +96,6 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^.*[^\$]$</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>972223F8-62FF-481B-A278-48AF806C3F68</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import sys
-
-query = sys.argv[1]
-
-sys.stdout.write(query[:-1])  # remove last $</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>ED2EA30D-58AD-47A7-9FBC-ABA20ECACCEF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>URL copied to clipboard</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>CA1FA265-9751-4778-808B-F126C5305582</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>A840295D-8515-4A70-9CCC-0F4AFB04858C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^.*\$$</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>316EF341-C933-4CB3-BD1C-4AFDE5AC1C25</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Fork from Aviv Kiss to fix encode issue for unicode input.
@@ -271,30 +106,9 @@ http://www.alfredforum.com/topic/940-google-search-in-line-results-workflow/</st
 		<key>15CC49CD-EE87-4647-8E17-6141FA95D4C2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>80</integer>
+			<integer>140</integer>
 			<key>ypos</key>
 			<integer>50</integer>
-		</dict>
-		<key>316EF341-C933-4CB3-BD1C-4AFDE5AC1C25</key>
-		<dict>
-			<key>xpos</key>
-			<integer>230</integer>
-			<key>ypos</key>
-			<integer>350</integer>
-		</dict>
-		<key>972223F8-62FF-481B-A278-48AF806C3F68</key>
-		<dict>
-			<key>xpos</key>
-			<integer>320</integer>
-			<key>ypos</key>
-			<integer>80</integer>
-		</dict>
-		<key>A840295D-8515-4A70-9CCC-0F4AFB04858C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
-			<key>ypos</key>
-			<integer>320</integer>
 		</dict>
 		<key>B6E9EBE4-42CC-4D19-A42E-FF5FBBA7E54D</key>
 		<dict>
@@ -302,20 +116,6 @@ http://www.alfredforum.com/topic/940-google-search-in-line-results-workflow/</st
 			<integer>550</integer>
 			<key>ypos</key>
 			<integer>50</integer>
-		</dict>
-		<key>CA1FA265-9751-4778-808B-F126C5305582</key>
-		<dict>
-			<key>xpos</key>
-			<integer>680</integer>
-			<key>ypos</key>
-			<integer>320</integer>
-		</dict>
-		<key>ED2EA30D-58AD-47A7-9FBC-ABA20ECACCEF</key>
-		<dict>
-			<key>xpos</key>
-			<integer>320</integer>
-			<key>ypos</key>
-			<integer>320</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
