@@ -38,7 +38,7 @@ gs query
 
 ## Screenshots
 
-![Default UI](https://i.imgur.com/8fGcx4j.png)
+![Default UI](https://i.imgur.com/SlZx5L6.png)
 
 ![Search 1](https://i.imgur.com/WeBLxZp.png)
 
