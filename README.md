@@ -10,6 +10,17 @@ This workflow allows you to do inline Google searches right from the Alfred bar.
 It gives you the flexibility to either open the result URL or copy it to clipboard.
 
 
+## IMPORTANT
+
+Adapted from [googlesearch's README](https://github.com/aviaryan/googlesearch)
+
+> Overusing this workflow might lead to your IP being blocked by Google Search servers.
+Searches through Chrome or another browser might still work but this workflow will stop working.
+I recommend keeping a 10-15 seconds gap after each usage of this workflow.
+In most cases, much lower gaps or even continous use of the workflow will still work but still this is something to be kept in mind.
+If you see a 'rate limit' or a 503 error, it's best to stop using the workflow and try back after some time (~1 minute).
+
+
 ## Installing
 
 Download [Google Search workflow file](https://github.com/aviaryan/alfred-google-search/raw/master/GoogleSearch.alfredworkflow) 
