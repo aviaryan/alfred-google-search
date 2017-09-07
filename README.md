@@ -23,7 +23,7 @@ If you see a 'rate limit' or a 503 error, it's best to stop using the workflow a
 
 ## Installing
 
-Download [Google Search workflow file](https://github.com/aviaryan/alfred-google-search/raw/master/GoogleSearch.alfredworkflow) 
+Download [Google Search workflow file](https://github.com/aviaryan/alfred-google-search/raw/master/Google%20Search.alfredworkflow) 
 and double click to open it with Alfred.
 
 
