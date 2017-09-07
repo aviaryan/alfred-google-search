@@ -6,7 +6,7 @@ from sys import argv, stdout
 import json
 
 # https://github.com/aviaryan/googlesearch
-from googlesearch import search
+from gsearch.googlesearch import search
 
 
 isClipboard = False

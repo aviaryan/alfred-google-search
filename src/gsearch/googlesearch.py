@@ -3,9 +3,9 @@
 from __future__ import print_function
 
 import re
+import traceback
 import sys
 from random import choice
-from data import user_agents
 
 try:
 	# Python 3
@@ -13,11 +13,18 @@ try:
 	from html.parser import HTMLParser # keep it to avoid warning
 	from html import unescape
 	from urllib.parse import quote
+	# local
+	try:
+		from gsearch.data import user_agents # works in tests
+	except ImportError:
+		from data import user_agents # works in a normal run
 except ImportError:
 	# Python 2
 	import urllib2 as request
 	from urllib import quote
 	from HTMLParser import HTMLParser
+	# local
+	from data import user_agents
 
 # placeholder
 isPython2 = sys.version.startswith('2')
@@ -40,8 +47,10 @@ def download(query, num_results):
 	})
 	try:
 		response = request.urlopen(req)
-	except:  # catch connection issues
+	except Exception:  # catch connection issues
 		# may also catch 503 rate limit exceed
+		print('ERROR\n')
+		traceback.print_exc()
 		return ''
 	# response.read is bytes in Py 3
 	if isPython2:
@@ -89,7 +98,7 @@ def search(query, num_results=10):
 	data = download(query, num_results)
 	results = re.findall(r'\<h3.*?\>.*?\<\/h3\>', data, re.IGNORECASE)
 	if results is None or len(results) == 0:
-		print('No results where found? Did the rate limit exceed?')
+		print('No results where found. Did the rate limit exceed?')
 		return []
 	# search has results
 	links = []
@@ -112,9 +121,16 @@ def search(query, num_results=10):
 	return links
 
 
-if __name__ == '__main__':
+def run():
+	"""
+	CLI endpoint to run the program
+	"""
 	if len(sys.argv) > 1:
 		print(search(sys.argv[1]))
 	else:
 		# print(search('Kimi no na wa'))
 		print(search('君の名'))
+
+
+if __name__ == '__main__':
+	run()
